@@ -1,0 +1,8 @@
+.ulz1 {
+    display: none;
+}
+
+.inputz1:focus ~ .ulz1 {
+    display: block;
+}
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/learn.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div class="main">
+        <div class="container">
+
+            <!-- js event -->
+            <div class="row">
+                <div>
+                    <ul class="list fl">
+                        <li class="item js-item">1</li>
+                        <li class="item js-item">2</li>
+                    </ul>
+                    <div id="sub" class="sub js-sub">
+                        <i class="icon fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <input class="ipt js-ipt" value="onclick" onclick="hideBoxs()" type="button">
+                <input class="ipt mt-6 js-ipt-0" value="hide js" type="button">
+            </div>
+            <div class="row">
+                <input class="ipt fl js-ipt-1" value="click" type="button">
+                <input class="ipt fl js-ipt-2" value="dbl" type="button">
+                <input class="ipt fl js-ipt-5" value="mult" type="button">
+                <input class="ipt fl js-ipt-3" value="del" type="button">
+                <input class="ipt fl js-ipt-4" value="move" type="button">
+                <input class="ipt fl js-ipt-6" value="change" type="button">
+                <input class="ipt fl js-ipt-7" value="keep" type="button">
+            </div>
+            <div class="row">
+                <p id="para">This is a function </p>
+                <p id="para1"></p>
+            </div>
+            <div class="row">
+                <input class="ipt fl" onclick="showModal()" value="modal" type="button">
+            </div>
+            
+            <!-- animation -->
+            <!-- <div class="row">
+                <div class="div-box"></div>
+            </div>  -->
+
+            <!-- Learn -->
+            <div class="row">
+                <div class="boxz"></div>
+                <input type="text">
+                <input type="checkbox" class="inputz">
+                <select name="" id="">
+                    <option value="1">JS</option>
+                    <option value="2">PHP</option>
+                    <option value="3">Ruby</option>
+                </select>
+                <a name="search" href="http://f8.edu.vn">Google</a>
+                <a name="language" href="http://google.com">HTML</a>
+                <!-- preventDefault -->
+                <input class="inputz1" placeholder="search">
+                <ul class="ulz1">
+                    <li>JS</li>
+                    <li>PHP</li>
+                    <li>Ruby</li>
+                </ul>
+                <div >
+                    <button class="btnz">click me!</button>
+                </div>
+            </div> 
+            <div class="row">
+                <ul id="post-box"></ul>
+            </div>
+
+            <div class="row">
+                <input type="text" placeholder="Enter car" id="input">
+                <button id="submit">Add</button>
+                <ul id="root"></ul>
+            </div>
+
+            <div class="row">
+                <button id="deposit"> Deposit $10</button>
+                <button id="withdraw"> Withdraw $10</button>
+                <h1 id="output"></h1>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="mdl js-mdl" onclick="hideModal()">
+        <div class="mdlC js-mdlC">
+            <h5 class="mdlH">Modal</h5>
+            <p class="mdlP" onclick="hideModal()">Close</p>
+            <p class="mdlP" onclick="showModal1(), hideModal()">Soccer</p>
+            <p class="mdlP" onclick="showModal2(), hideModal()">List icon</p>
+            <p class="mdlP" onclick="showModal3(), hideModal()">List close</p>
+        </div>
+    </div>
+    <div class="mdl js-mdl-1" onclick="hideModal1()">
+        <div class="mdlC js-mdlC-1">
+            <h5 class="mdlH">Soccer</h5>
+            <p class="mdlP" onclick="hideModal1()">Close</p>
+            <div class="soccer js-soccer">
+                <div id="field">
+                    <img src="https://en.js.cx/clipart/ball.svg" id="ball">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdl js-mdl-2" onclick="hideModal2()">
+        <div class="mdlC js-mdlC-2">
+            <h5 class="mdlH">List icon</h5>
+            <p class="mdlP" onclick="hideModal2()">Close</p>
+            <div id="carousel" class="carousel">
+                <button class="arrow prev">⇦</button>
+                <div class="gallery">
+                  <ul>
+                    <li><img src="https://en.js.cx/carousel/1.png"></li>
+                    <li><img src="https://en.js.cx/carousel/2.png"></li>
+                    <li><img src="https://en.js.cx/carousel/3.png"></li>
+                    <li><img src="https://en.js.cx/carousel/4.png"></li>
+                    <li><img src="https://en.js.cx/carousel/5.png"></li>
+                    <li><img src="https://en.js.cx/carousel/6.png"></li>
+                    <li><img src="https://en.js.cx/carousel/7.png"></li>
+                    <li><img src="https://en.js.cx/carousel/8.png"></li>
+                    <li><img src="https://en.js.cx/carousel/9.png"></li>
+                    <li><img src="https://en.js.cx/carousel/10.png"></li>
+                  </ul>
+                </div>
+                <button class="arrow next">⇨</button>
+            </div>
+        </div>
+    </div>
+    <div class="mdl js-mdl-3" onclick="hideModal3()">
+        <div class="mdlC js-mdlC-3">
+            <h5 class="mdlH">List close</h5>
+            <p class="mdlP" onclick="hideModal3()">Close</p>
+            <div class="div">
+                <h3 class="pane">Horse</h3>
+                <h3 class="pane">Donkey</h3>
+                <h3 class="pane">Cat</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mdl js-mdl-3" onclick="hideModal3()">
+        <div class="mdlC js-mdlC-3">
+            <h5 class="mdlH">List close</h5>
+            <p class="mdlP" onclick="hideModal3()">Close</p>
+            
+        </div>
+    </div>
+
+
+
+
+    
+
+    <script type="module" src="./js/learn.js"></script>
+    <!-- <script src="./js/event.js"></script> -->
+    <!-- <script src="./js/main.js"></script> -->
+    </script>
+</body>
+</html>
