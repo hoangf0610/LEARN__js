@@ -1,0 +1,130 @@
+.app1 {
+    width: 100vw;
+    height: 100vh;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 25rem;
+    padding: .4rem;
+    border-radius: 1rem;
+    border: 2px solid var(--white-color);
+    background: transparent;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--white-color);
+    font-weight: 700;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 10;
+    cursor: pointer;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--white-color);
+    border-radius: .5rem;
+    z-index: -1;
+    transition: all .5s;
+    border-bottom-right-radius: 70%;
+    border-top-left-radius: 70%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+.btn:hover {
+    color: var(--main-color);
+    transform: scale(1.05,1.05);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .8);
+}
+.btn:hover::before {
+    width: 100%;
+}
+
+/* page */
+.title {
+    position: fixed;
+    top: 2rem;
+
+}
+.page {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+.page1 {
+    background: rgb(110, 237, 254);
+}
+.page2 {
+    background: rgb(155, 255, 150);
+}
+.page3 {
+    background: rgb(241, 255, 150);
+}
+.page4 {
+    background: rgb(255, 150, 150);
+}
+
+/* page 1 */
+.container {
+    background: red;
+    /* width: 100%; */
+    height: 40rem;
+    list-style: none;
+    padding: 2rem;
+    /* display: flex; */
+}
+.row1 {
+    display: flex;
+    width: 100%;
+}
+
+.item {
+    width: 15rem;
+    height: 25rem;
+    background: var(--white-color);
+    margin: 1rem;
+}
+
+
+/* page 2 */
+.tri-1,
+.tri-2,
+.tri-3,
+.tri-4 {
+	width: 30px;
+	height: 30px;
+	background: #fff;
+    display: inline-block;
+	transform: rotate(25deg);
+	border: 5px double #6a26f1;
+    position: absolute;
+	opacity: .1;
+    z-index: 0;
+}
+.open {
+	opacity: 1;
+    animation: onOff 5s;
+}
+
+/* keyframe */
+@keyframes afterPage {
+    from {right: 0; opacity: 1; display: flex;}
+    to {right: 100%; opacity: 0; display: none;}
+}
+@keyframes beforePage {
+    from {right: -100%; opacity: 0; display: none;}
+    to {right: 0; opacity: 1; display: flex;}
+}
